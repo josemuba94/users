@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card mt-3 border border-primary">
+        <div class="card-header text-white bg-primary">
+            <h4><strong>Sing in</strong></h4>
+        </div>
+        <div class="card-body">
+            <!-- Login Form -->
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <form>
+                        <input type="text" class="form-control" name="username" [(ngModel)]="username" placeholder="Username">
+                        <input type="text" class="form-control mt-2" name="password" [(ngModel)]="password" placeholder="Password">
+                        <div class="text-danger" *ngIf="showErrorMessage">
+                            <small> Incorrect username or password</small><br>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mt-3" (click)="login()">Login</button>
+                    </form>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+</div>
